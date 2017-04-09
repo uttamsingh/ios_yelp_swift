@@ -12,5 +12,6 @@ public struct YelpContants {
 
     static let filterViewControllerTableCell = "FilterTableViewCell"
     static let filterViewControllerTableHeaderCell = "TableViewHeaderView"
+    static let numberOfSectionForFilter: Int = 4 as Int
     
 }
