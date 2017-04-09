@@ -9,7 +9,7 @@
 import UIKit
 import MBProgressHUD
 
-class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate , FiltersViewControllerDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     var searchController: UISearchController!
@@ -26,7 +26,17 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
      
         tableView.delegate = self
         tableView.dataSource = self
+
+        //call yelp api to populate some data
+        callYelpAPI()
         
+        //Create search bar
+        createSearchbar()
+        //add refresh control
+        addRefreshControl()
+    }
+    
+    func callYelpAPI() {
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
@@ -38,24 +48,8 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
             
-            }
+        }
         )
-      
-        /* Example of Yelp search with more search options specified
-         Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["asianfusion", "burgers"], deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
-         self.businesses = businesses
-         
-         for business in businesses {
-         print(business.name!)
-         print(business.address!)
-         }
-         }
-         */
-        
-        //Create search bar
-        createSearchbar()
-        //add refresh control
-        addRefreshControl()
     }
     
     func addRefreshControl() {
@@ -93,15 +87,13 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as!    UINavigationController
+        let filterViewController = navigationController.topViewController as! FiltersViewController
+        filterViewController.delegate = self
+    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -114,7 +106,8 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.businessCell, for: indexPath) as! BusinessCell
-        cell.business = self.businesses[indexPath.row]
+        cell.business = self.businesses?[indexPath.row]
+        cell.selectionStyle = .blue
         return cell
     }
     
@@ -123,7 +116,21 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     // Hides the RefreshControl
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
         print("Refreshing data...")
-        
+        callYelpAPI()
         refreshControl.endRefreshing()
+    }
+    
+    func filtersViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : AnyObject]) {
+        
+        if  filters["categories"] != nil {
+            let categories = filters["categories"] as! [String]
+            print("print category - ", categories)
+            
+            Business.searchWithTerm(term: "Restaurants", sort: nil, categories: categories, deals: nil) { (businesses: [Business]!, error: Error!) in
+                print(businesses)
+                self.businesses = businesses
+                //            self.tableView.reloadData()
+            }
+        }
     }
 }

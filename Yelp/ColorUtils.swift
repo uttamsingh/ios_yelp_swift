@@ -9,7 +9,7 @@
 import UIKit
 
 public struct ColorUtils {
-    static let navigationBackgroundColor = UIColor(red: 63.0/255.0, green: 172.0/255.0, blue: 236.0/255.0, alpha: 1.0)
+    static let navigationBackgroundColor = UIColor.cyan
 }
 
 
