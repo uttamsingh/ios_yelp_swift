@@ -26,6 +26,8 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
      
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
 
         //call yelp api to populate some data
         callYelpAPI()

@@ -30,60 +30,82 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="80S-Xx-gwI" id="jm5-va-m66">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1mz-um-46g">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1mz-um-46g">
                                                     <rect key="frame" x="8" y="8" width="65" height="65"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="BQA-Ve-Hh3"/>
+                                                        <constraint firstAttribute="height" constant="65" id="u7V-b7-UZk"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="1. The codemother Fish a" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-06-8pO">
-                                                    <rect key="frame" x="81" y="7" width="173" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="1. The codemother Fish a" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-06-8pO">
+                                                    <rect key="frame" x="81" y="8" width="236" height="17"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mbR-rm-Qd7">
-                                                    <rect key="frame" x="81" y="24" width="83" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mbR-rm-Qd7">
+                                                    <rect key="frame" x="81" y="26" width="83" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="Fby-CI-7AP"/>
+                                                        <constraint firstAttribute="width" constant="83" id="PL6-N6-Kme"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="469 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-Va-vjK">
-                                                    <rect key="frame" x="172" y="24" width="76" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="469 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-Va-vjK">
+                                                    <rect key="frame" x="172" y="26" width="76" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-Y1-pZH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-Y1-pZH">
                                                     <rect key="frame" x="350" y="24" width="17" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="88 Division St, Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiv-Pv-OFm">
-                                                    <rect key="frame" x="81" y="40.5" width="278" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88 Division St, Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiv-Pv-OFm">
+                                                    <rect key="frame" x="81" y="41" width="163.5" height="15"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="0.08mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRe-3J-NRH">
-                                                    <rect key="frame" x="325" y="6.5" width="42" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.08mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRe-3J-NRH">
+                                                    <rect key="frame" x="325" y="7" width="42" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The  Seafood, Salad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMW-WW-HqG">
-                                                    <rect key="frame" x="81" y="56" width="126" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The  Seafood, Salad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMW-WW-HqG">
+                                                    <rect key="frame" x="81" y="56" width="117.5" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mbR-rm-Qd7" firstAttribute="top" secondItem="jm5-va-m66" secondAttribute="top" constant="26" id="6Lx-KG-lZH"/>
+                                                <constraint firstItem="kiv-Pv-OFm" firstAttribute="leading" secondItem="xMW-WW-HqG" secondAttribute="leading" id="7Ev-wy-gVe"/>
+                                                <constraint firstItem="qyP-06-8pO" firstAttribute="top" secondItem="jm5-va-m66" secondAttribute="top" constant="8" id="7p0-Ry-SXu"/>
+                                                <constraint firstItem="1mz-um-46g" firstAttribute="top" secondItem="jm5-va-m66" secondAttribute="top" constant="8" id="BLh-aX-J1w"/>
+                                                <constraint firstItem="aFT-Y1-pZH" firstAttribute="top" secondItem="iRe-3J-NRH" secondAttribute="bottom" constant="2" id="DiG-zk-Cwh"/>
+                                                <constraint firstItem="qyP-06-8pO" firstAttribute="leading" secondItem="1mz-um-46g" secondAttribute="trailing" constant="8" id="HGV-sS-xWS"/>
+                                                <constraint firstItem="xMW-WW-HqG" firstAttribute="top" secondItem="kiv-Pv-OFm" secondAttribute="bottom" id="Mr2-Q0-H5H"/>
+                                                <constraint firstItem="xMW-WW-HqG" firstAttribute="leading" secondItem="kiv-Pv-OFm" secondAttribute="leading" id="OKn-n4-YiO"/>
+                                                <constraint firstItem="fr0-Va-vjK" firstAttribute="centerY" secondItem="mbR-rm-Qd7" secondAttribute="centerY" id="Oe2-ug-lgQ"/>
+                                                <constraint firstItem="kiv-Pv-OFm" firstAttribute="top" secondItem="fr0-Va-vjK" secondAttribute="bottom" id="PwP-XP-PM4"/>
+                                                <constraint firstItem="iRe-3J-NRH" firstAttribute="leading" secondItem="qyP-06-8pO" secondAttribute="trailing" constant="8" id="alA-Kh-nF8"/>
+                                                <constraint firstItem="kiv-Pv-OFm" firstAttribute="leading" secondItem="mbR-rm-Qd7" secondAttribute="leading" id="dRa-Y9-Oge"/>
+                                                <constraint firstItem="mbR-rm-Qd7" firstAttribute="leading" secondItem="1mz-um-46g" secondAttribute="trailing" constant="8" id="grw-Vh-Fe8"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xMW-WW-HqG" secondAttribute="bottom" constant="12" id="iSj-Wz-dzQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="iRe-3J-NRH" secondAttribute="trailing" constant="8" id="jNA-i2-dQc"/>
+                                                <constraint firstItem="1mz-um-46g" firstAttribute="leading" secondItem="jm5-va-m66" secondAttribute="leading" constant="8" id="kVx-1u-2Uq"/>
+                                                <constraint firstItem="iRe-3J-NRH" firstAttribute="top" secondItem="jm5-va-m66" secondAttribute="topMargin" constant="-1" id="kdy-cx-OPM"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1mz-um-46g" secondAttribute="bottom" constant="8" id="kgd-oV-DOs"/>
+                                                <constraint firstItem="iRe-3J-NRH" firstAttribute="trailing" secondItem="aFT-Y1-pZH" secondAttribute="trailing" id="kyF-lD-sR8"/>
+                                                <constraint firstItem="fr0-Va-vjK" firstAttribute="leading" secondItem="mbR-rm-Qd7" secondAttribute="trailing" constant="8" symbolic="YES" id="q1t-Bb-X5u"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addresslabel" destination="kiv-Pv-OFm" id="X2v-zh-O7m"/>
