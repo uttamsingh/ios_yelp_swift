@@ -40,8 +40,8 @@
                                                         <constraint firstAttribute="height" constant="65" id="u7V-b7-UZk"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="1. The codemother Fish a" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-06-8pO">
-                                                    <rect key="frame" x="81" y="8" width="236" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. The codemother Fish a" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-06-8pO">
+                                                    <rect key="frame" x="81" y="8" width="227" height="16"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -90,12 +90,13 @@
                                                 <constraint firstItem="qyP-06-8pO" firstAttribute="top" secondItem="jm5-va-m66" secondAttribute="top" constant="8" id="7p0-Ry-SXu"/>
                                                 <constraint firstItem="1mz-um-46g" firstAttribute="top" secondItem="jm5-va-m66" secondAttribute="top" constant="8" id="BLh-aX-J1w"/>
                                                 <constraint firstItem="aFT-Y1-pZH" firstAttribute="top" secondItem="iRe-3J-NRH" secondAttribute="bottom" constant="2" id="DiG-zk-Cwh"/>
+                                                <constraint firstItem="fr0-Va-vjK" firstAttribute="top" secondItem="qyP-06-8pO" secondAttribute="bottom" constant="2" id="Ebj-pR-gym"/>
                                                 <constraint firstItem="qyP-06-8pO" firstAttribute="leading" secondItem="1mz-um-46g" secondAttribute="trailing" constant="8" id="HGV-sS-xWS"/>
                                                 <constraint firstItem="xMW-WW-HqG" firstAttribute="top" secondItem="kiv-Pv-OFm" secondAttribute="bottom" id="Mr2-Q0-H5H"/>
                                                 <constraint firstItem="xMW-WW-HqG" firstAttribute="leading" secondItem="kiv-Pv-OFm" secondAttribute="leading" id="OKn-n4-YiO"/>
                                                 <constraint firstItem="fr0-Va-vjK" firstAttribute="centerY" secondItem="mbR-rm-Qd7" secondAttribute="centerY" id="Oe2-ug-lgQ"/>
                                                 <constraint firstItem="kiv-Pv-OFm" firstAttribute="top" secondItem="fr0-Va-vjK" secondAttribute="bottom" id="PwP-XP-PM4"/>
-                                                <constraint firstItem="iRe-3J-NRH" firstAttribute="leading" secondItem="qyP-06-8pO" secondAttribute="trailing" constant="8" id="alA-Kh-nF8"/>
+                                                <constraint firstItem="iRe-3J-NRH" firstAttribute="leading" secondItem="qyP-06-8pO" secondAttribute="trailing" constant="17" id="alA-Kh-nF8"/>
                                                 <constraint firstItem="kiv-Pv-OFm" firstAttribute="leading" secondItem="mbR-rm-Qd7" secondAttribute="leading" id="dRa-Y9-Oge"/>
                                                 <constraint firstItem="mbR-rm-Qd7" firstAttribute="leading" secondItem="1mz-um-46g" secondAttribute="trailing" constant="8" id="grw-Vh-Fe8"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xMW-WW-HqG" secondAttribute="bottom" constant="12" id="iSj-Wz-dzQ"/>
