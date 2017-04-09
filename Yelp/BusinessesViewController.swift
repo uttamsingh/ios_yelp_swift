@@ -122,9 +122,9 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func filtersViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : AnyObject]) {
         
-        if  (filters["categories"] != nil  || filters["categories"] != nil
-            || filters["categories"] != nil || filters["categories"] != nil) {
-            let categories = filters["categories"] as! [String]
+        if  (filters["categories"] != nil  || filters["sortBy"] != nil
+            || filters["deals"] != nil) {
+            let categories = filters["categories"] as? [String]
             let sortBy = filters["sortBy"] as? YelpSortMode
             let deals = filters["deals"] as? Bool
             print("Filters in BusineesViewController")
@@ -132,7 +132,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             Business.searchWithTerm(term: "Restaurants", sort: sortBy, categories: categories, deals: deals) { (businesses: [Business]!, error: Error!) in
                 print("printint search with term resposne - ", businesses)
                 self.businesses = businesses
-                //            self.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
