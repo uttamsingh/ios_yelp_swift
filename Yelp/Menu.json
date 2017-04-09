@@ -1,0 +1,20 @@
+{
+    "menu": {
+        "sections": [
+            {
+                     "Deals" : {
+                        "labelText" : "Offering a deal"
+                     },
+                     "Deals" : {
+                     "labelText" : "Offering a deal"
+                     },
+                     "Deals" : {
+                     "labelText" : "Offering a deal"
+                     },
+                     "Deals" : {
+                     "labelText" : "Offering a deal"
+                     },
+            },
+        ]
+    }
+}
