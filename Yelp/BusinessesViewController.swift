@@ -12,10 +12,14 @@ import MBProgressHUD
 class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate , FiltersViewControllerDelegate{
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filterButton: UIBarButtonItem!
+    
     var searchController: UISearchController!
     var refreshControl: UIRefreshControl!
     
     var businesses: [Business]!
+    var searchResult: [Business]!
+    var currentFilter = [String : AnyObject]()
     
     struct Storyboard {
         static let businessCell = "BusinessCell"
@@ -39,6 +43,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func callYelpAPI() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
@@ -52,6 +57,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             
         }
         )
+      MBProgressHUD.hide(for: self.view, animated: false)
     }
     
     func addRefreshControl() {
@@ -97,6 +103,19 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        searchBar.resignFirstResponder()
+        let searchTerm = searchBar.text
+        
+        Business.searchWithTerm(term: searchTerm!) { (businesses: [Business]!, error: Error!) in
+            print("printint search with term resposne - ", businesses)
+            self.businesses = businesses ?? nil
+            self.tableView.reloadData()
+        }
+       MBProgressHUD.hide(for: self.view, animated: false)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if businesses != nil {
@@ -109,7 +128,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.businessCell, for: indexPath) as! BusinessCell
         cell.business = self.businesses?[indexPath.row]
-        cell.selectionStyle = .blue
+        
         return cell
     }
     
@@ -129,12 +148,15 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             let categories = filters["categories"] as? [String]
             let sortBy = filters["sortBy"] as? YelpSortMode
             let deals = filters["deals"] as? Bool
+            
             print("Filters in BusineesViewController")
             print(filters)
             Business.searchWithTerm(term: "Restaurants", sort: sortBy, categories: categories, deals: deals) { (businesses: [Business]!, error: Error!) in
                 print("printint search with term resposne - ", businesses)
-                self.businesses = businesses
-                self.tableView.reloadData()
+                if businesses != nil {
+                    self.businesses = businesses
+                    self.tableView.reloadData()
+                }
             }
         }
     }
