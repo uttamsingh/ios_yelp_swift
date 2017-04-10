@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 - [x] The filters table should be organized into sections as in the mock. This story is not fully completed as I am yet to change code for collapsable view
 - [x] You can use the default UISwitch for on/off states.
 - [x] Clicking on the "Search" button should dismiss the filters page and trigger the search w/ the new filter settings. APart from distance all other three selection should provide the result
-- [x] Display some of the available Yelp categories (choose any 3-4 that you want).
+- [x] Display some of the available Yelp categories (choose any 3-4 that you want). I have added all categories but displaying in list functionality is not complete
 
 The following **optional** features are implemented:
 
@@ -28,7 +28,7 @@ The following **optional** features are implemented:
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
 1. Refactoring of code is required as I have not used enums effectively 
-2. Missed implementing almost all of the optional feature, I spend lot of time designing custom switch which didn't work'
+2. Missed implementing most of the optional feature, I spend lot of time designing custom switch which didn't work'
 
 ## Video Walkthrough
 
